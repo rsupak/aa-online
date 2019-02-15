@@ -1,3 +1,4 @@
+require 'byebug'
 # Write a method that capitalizes each word in a string like a book title
 # Do not capitalize words like 'a', 'and', 'of', 'over' or 'the'.
 
@@ -5,6 +6,7 @@ LITTLE_WORDS = %w[a and of over the].freeze
 
 def titleize(title)
   words = title.split(' ')
+  debugger
   titleized_words = words.map.with_index do |word, idx|
     if idx.zero? || !LITTLE_WORDS.include?(word)
       word.capitalize
@@ -13,6 +15,10 @@ def titleize(title)
     end
   end
   titleized_words.join(' ')
+end
+
+if $PROGRAM_NAME == __FILE__
+  titleize("We are the champions!")
 end
 
 # Write a method that returns the largest prime factor of a given integer.
@@ -55,3 +61,5 @@ def all_unique_chars?(str)
   letters = str.split('').reject { |char| char == ' ' }
   letters.uniq.length = letters.length
 end
+
+

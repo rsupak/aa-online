@@ -122,30 +122,3 @@ def subwords(word, dictionary)
   end
 end
 
-dictionary = ['home', 'break', 'bob', 'cat', 'goal']
-word = 'zgoalbreaktribeoakcattomb'
-
-# p [1, 2, 3].my_each { |num| puts num }
-# p [1, 2, 3].my_each_with_index { |num, i| puts "#{num}, #{i}" }
-# p [1, 2, 3].my_select { |num| num.odd? }
-# p [1 ,2, 3].my_reject { |num| num.odd? }
-# p [1, 2, 3].my_any? { |num| num.odd? }
-# p [1, 2, 3].my_all? { |num| num.even? }
-# p [1, 2, [3, 4]].my_flatten
-# a = [4, 5, 6]
-# b = [7, 8, 9]
-# p [1, 2, 3].my_zip(a, b)
-# p a.my_zip([1,2], [8])
-# p [1,2].my_zip(a, b)
-# c = [10, 11, 12]
-# d = [13, 14, 15]
-# p [1,2].my_zip(a, b, c, d)
-# p [1, 2, 3, 4].my_rotate
-# p [1, 2, 3, 4].my_rotate(2)
-# p %w[a b c].join
-# p %w[a b c].join('$')
-# p [1,2,3].my_reverse
-p factor(256)
-p [1,3,2,6,4,8].bubble_sort!
-p [3,6,2,8,4,7].bubble_sort
-p subwords(word, dictionary)
