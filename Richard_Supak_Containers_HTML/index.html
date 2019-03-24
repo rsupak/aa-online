@@ -143,6 +143,36 @@
           </li>
         </ol>
       </section>
+      <section>
+        <form action="">
+          <div>
+            <label for="name">Name: </label>
+            <input type="text" name="name" id="name">
+          </div>
+          <div role="radiogroup">
+            <label for="rating">Rating: </label>
+            1 <input type="radio" name="rating" id="1">
+            2 <input type="radio" name="rating" id="2">
+            3 <input type="radio" name="rating" id="3">
+            4 <input type="radio" name="rating" id="4">
+            5 <input type="radio" name="rating" id="5">
+          </div>
+          <div>
+            <label for="expertise">Cooking Expertise: </label>
+            <select name="expertise" id="expertise">
+              <option value="" disabled selected>Select Cooking Expertise</option>
+              <option value="sometimes">Sometimes Cook</option>
+              <option value="daily">Cook Everyday</option>
+              <option value="hobby">Cooking is a Hobby</option>
+              <option value="professional">Professional Chef</option>
+            </select>
+          </div>
+          <div>
+            <label for="review">Review: <br> <textarea name="" id="" cols="30" rows="10"></textarea></label>
+          </div>
+          <button type="submit">Submit Review</button>
+        </form>
+      </section>
       <footer>
         <p>Original recipe by: 
           <a href="https://www.dessertfortwo.com/authentic-czech-kolaches/">Christina Lane</a>
