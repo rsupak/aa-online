@@ -127,7 +127,7 @@ class GhostGame
 
     losses[previous_player] += 1
 
-    if losses[previous_player] == MAX_LOSS_COUNT
+    if losses[previous_player] == MAX_LOSS_COUNT - 1
       puts "#{previous_player} has been eliminated!"
     end
 

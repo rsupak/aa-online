@@ -58,7 +58,7 @@ class Array
     result = ''
     self[0...-1].my_each { |elem| result << char + connection }
 
-    result += self.last
+    result += last
   end
 
   def my_reject
@@ -68,11 +68,31 @@ class Array
   end
 
   def my_rotate(num = 1)
-    while num > 0
-      self << shift
-      num -= 1
+    # return self if num.zero?
+
+    # temp = clone
+    # if num.positive?
+    #   while num.positive?
+    #     temp << temp.shift
+    #     num -= 1
+    #   end
+    # else
+    #   while num.negative?
+    #     temp.unshift(temp.pop)
+    #     num += 1
+    #   end
+    # end
+    # temp
+    return self if num.zero?
+
+    temp = clone
+    if num.positive?
+      temp << temp.shift
+      temp.my_rotate(num - 1)
+    else
+      temp.unshift(temp.pop)
+      temp.my_rotate(num + 1)
     end
-    self
   end
 
   def my_select
@@ -122,3 +142,12 @@ def subwords(word, dictionary)
   end
 end
 
+arr = [1,2,3,4]
+rotated = arr.my_rotate(1)
+puts "Original #{arr}"
+puts "Rotated #{rotated}"
+puts
+arr = [1,2,3,4]
+rotated = arr.my_rotate(-1)
+puts "Original #{arr}"
+puts "Rotated #{rotated}"
